@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,36 @@
 		01C230752ADE156A009F57FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C230742ADE156A009F57FF /* ContentView.swift */; };
 		01C230772ADE156C009F57FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C230762ADE156C009F57FF /* Assets.xcassets */; };
 		01C2307A2ADE156C009F57FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C230792ADE156C009F57FF /* Preview Assets.xcassets */; };
-		01C230852ADE1BE8009F57FF /* LSRefreshable in Frameworks */ = {isa = PBXBuildFile; productRef = 01C230842ADE1BE8009F57FF /* LSRefreshable */; };
+		01C230B82ADE23E4009F57FF /* LSRefreshable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C230B72ADE23E4009F57FF /* LSRefreshable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01C230BB2ADE23E4009F57FF /* LSRefreshable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C230B52ADE23E4009F57FF /* LSRefreshable.framework */; };
+		01C230BC2ADE23E4009F57FF /* LSRefreshable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C230B52ADE23E4009F57FF /* LSRefreshable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01C230C22ADE23FD009F57FF /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C230C02ADE23FD009F57FF /* RefreshableScrollView.swift */; };
+		01C230C32ADE23FD009F57FF /* Refreshable+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C230C12ADE23FD009F57FF /* Refreshable+View.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01C230B92ADE23E4009F57FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01C230672ADE156A009F57FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01C230B42ADE23E4009F57FF;
+			remoteInfo = LSRefreshable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01C2309C2ADE21E3009F57FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				01C230BC2ADE23E4009F57FF /* LSRefreshable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01C2306F2ADE156A009F57FF /* RefreshDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +48,10 @@
 		01C230742ADE156A009F57FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01C230762ADE156C009F57FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C230792ADE156C009F57FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01C230B52ADE23E4009F57FF /* LSRefreshable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LSRefreshable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C230B72ADE23E4009F57FF /* LSRefreshable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSRefreshable.h; sourceTree = "<group>"; };
+		01C230C02ADE23FD009F57FF /* RefreshableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RefreshableScrollView.swift; path = ../../Sources/LSRefreshable/RefreshableScrollView.swift; sourceTree = "<group>"; };
+		01C230C12ADE23FD009F57FF /* Refreshable+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Refreshable+View.swift"; path = "../../Sources/LSRefreshable/Refreshable+View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +59,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01C230852ADE1BE8009F57FF /* LSRefreshable in Frameworks */,
+				01C230BB2ADE23E4009F57FF /* LSRefreshable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C230B22ADE23E4009F57FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +77,9 @@
 			isa = PBXGroup;
 			children = (
 				01C230712ADE156A009F57FF /* RefreshDemo */,
+				01C230B62ADE23E4009F57FF /* LSRefreshable */,
 				01C230702ADE156A009F57FF /* Products */,
+				01C2309D2ADE22D2009F57FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				01C2306F2ADE156A009F57FF /* RefreshDemo.app */,
+				01C230B52ADE23E4009F57FF /* LSRefreshable.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,7 +111,35 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		01C2309D2ADE22D2009F57FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01C230B62ADE23E4009F57FF /* LSRefreshable */ = {
+			isa = PBXGroup;
+			children = (
+				01C230B72ADE23E4009F57FF /* LSRefreshable.h */,
+				01C230C12ADE23FD009F57FF /* Refreshable+View.swift */,
+				01C230C02ADE23FD009F57FF /* RefreshableScrollView.swift */,
+			);
+			path = LSRefreshable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		01C230B02ADE23E4009F57FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C230B82ADE23E4009F57FF /* LSRefreshable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		01C2306E2ADE156A009F57FF /* RefreshDemo */ = {
@@ -79,18 +149,37 @@
 				01C2306B2ADE156A009F57FF /* Sources */,
 				01C2306C2ADE156A009F57FF /* Frameworks */,
 				01C2306D2ADE156A009F57FF /* Resources */,
+				01C2309C2ADE21E3009F57FF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01C230BA2ADE23E4009F57FF /* PBXTargetDependency */,
+			);
+			name = RefreshDemo;
+			packageProductDependencies = (
+			);
+			productName = RefreshDemo;
+			productReference = 01C2306F2ADE156A009F57FF /* RefreshDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01C230B42ADE23E4009F57FF /* LSRefreshable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C230BD2ADE23E4009F57FF /* Build configuration list for PBXNativeTarget "LSRefreshable" */;
+			buildPhases = (
+				01C230B02ADE23E4009F57FF /* Headers */,
+				01C230B12ADE23E4009F57FF /* Sources */,
+				01C230B22ADE23E4009F57FF /* Frameworks */,
+				01C230B32ADE23E4009F57FF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RefreshDemo;
-			packageProductDependencies = (
-				01C230842ADE1BE8009F57FF /* LSRefreshable */,
-			);
-			productName = RefreshDemo;
-			productReference = 01C2306F2ADE156A009F57FF /* RefreshDemo.app */;
-			productType = "com.apple.product-type.application";
+			name = LSRefreshable;
+			productName = LSRefreshable;
+			productReference = 01C230B52ADE23E4009F57FF /* LSRefreshable.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,6 +194,10 @@
 					01C2306E2ADE156A009F57FF = {
 						CreatedOnToolsVersion = 15.0;
 					};
+					01C230B42ADE23E4009F57FF = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
 				};
 			};
 			buildConfigurationList = 01C2306A2ADE156A009F57FF /* Build configuration list for PBXProject "RefreshDemo" */;
@@ -117,13 +210,13 @@
 			);
 			mainGroup = 01C230662ADE156A009F57FF;
 			packageReferences = (
-				01C230832ADE1BE8009F57FF /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = 01C230702ADE156A009F57FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				01C2306E2ADE156A009F57FF /* RefreshDemo */,
+				01C230B42ADE23E4009F57FF /* LSRefreshable */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +228,13 @@
 			files = (
 				01C2307A2ADE156C009F57FF /* Preview Assets.xcassets in Resources */,
 				01C230772ADE156C009F57FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C230B32ADE23E4009F57FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +250,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01C230B12ADE23E4009F57FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C230C32ADE23FD009F57FF /* Refreshable+View.swift in Sources */,
+				01C230C22ADE23FD009F57FF /* RefreshableScrollView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01C230BA2ADE23E4009F57FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01C230B42ADE23E4009F57FF /* LSRefreshable */;
+			targetProxy = 01C230B92ADE23E4009F57FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		01C2307B2ADE156C009F57FF /* Debug */ = {
@@ -275,6 +392,7 @@
 		01C2307E2ADE156C009F57FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +421,7 @@
 		01C2307F2ADE156C009F57FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +447,87 @@
 			};
 			name = Release;
 		};
+		01C230BE2ADE23E4009F57FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.LSRefreshable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		01C230BF2ADE23E4009F57FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.LSRefreshable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -349,21 +549,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		01C230BD2ADE23E4009F57FF /* Build configuration list for PBXNativeTarget "LSRefreshable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C230BE2ADE23E4009F57FF /* Debug */,
+				01C230BF2ADE23E4009F57FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		01C230832ADE1BE8009F57FF /* XCLocalSwiftPackageReference ".." */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ..;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		01C230842ADE1BE8009F57FF /* LSRefreshable */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = LSRefreshable;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01C230672ADE156A009F57FF /* Project object */;
 }
