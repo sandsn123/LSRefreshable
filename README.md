@@ -1,6 +1,18 @@
 # LSRefreshable
 Adapt SwiftUI's Refreshable to iOS13 and iOS14
 
+## Requirements
+- Xcode 12.x
+- Swift 5.x
+
+
+## Installation
+
+### [Swift Package Manager (SPM)](https://github.com/sandsn123/LSRefreshable.git#swift-package-manager-spm)
+
+1. File -> Swift Packages -> Add Package Dependency...
+2. Enter package URL :https://github.com/sandsn123/LSRefreshable.git, choose the latest release
+
 ## Expamle:
 
 ```swift
